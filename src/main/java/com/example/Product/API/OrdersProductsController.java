@@ -31,23 +31,7 @@ public class OrdersProductsController {
 
 
 
-    @GetMapping("/OrderProducts")
-    private ArrayList<OrderProduct> GetAll(
-            @RequestParam(name = "orderId", required = false, defaultValue = "") String orderId) {
-        ArrayList<OrderProduct> h = new ArrayList<OrderProduct>();
-        if (orderId.equals("")) {
-            return orderproducts;
-        } else {
 
-            for (OrderProduct element : orderproducts) {
-                if (orderId.equals(element.getOrderId())) {
-                    h.add(element);
-                }
-            }
-            return h;
-        }
-
-    }
 
     public static ArrayList<OrderProduct> GetOrderProductbyOrder(int orderId){
         ArrayList<OrderProduct> orderproductsnew = new ArrayList<>();

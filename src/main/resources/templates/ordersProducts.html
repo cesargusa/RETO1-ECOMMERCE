@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+</header>
+<body>
+    <h1>ORDER PRODUCTS</h1>
+  <li th:each="order : ${orderproduct}"
+        th:object="${order}" style="margin-top: 3%; list-style: none;">
+            <tr>
+                <th><span>Cantidad:</span></th>
+                <span style="color:red"><th th:text="*{cantidad}"></th></span>
+            </tr>
+            <br>
+            <tr>
+                <th><span>Product Id:</span></th>
+                <span style="color:blue"><th th:text="*{productId}"></th></span>
+            </tr>
+            <br>
+            <tr>
+                <th><span>Order Id:</span></th>
+                <span style="color:aqua"><th th:text="*{orderId}"></th></span>            
+            </tr>
+    
+    </li> 
+  
+
+
+</body>
+</html>
