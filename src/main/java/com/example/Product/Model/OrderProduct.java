@@ -5,6 +5,8 @@ public class OrderProduct {
     private int cantidad;
     private int orderId;
     private int productId;
+    private int orderProductId;
+    private static int idStatic=0;
 
     public OrderProduct() {
     }
@@ -14,7 +16,7 @@ public class OrderProduct {
         this.cantidad = cantidad;
         this.orderId = orderId;
         this.productId = productId;
-     
+        orderProductId= ++idStatic;
        
     }
     
@@ -43,6 +45,22 @@ public class OrderProduct {
 
     public void setProductId(int productId) {
         this.productId = productId;
+    }
+
+    public int getOrderProductId() {
+        return orderProductId;
+    }
+
+    public void setOrderProductId(int orderProductId) {
+        this.orderProductId = orderProductId;
+    }
+
+    public static int getIdStatic() {
+        return idStatic;
+    }
+
+    public static void setIdStatic(int idStatic) {
+        OrderProduct.idStatic = idStatic;
     }
 
  
