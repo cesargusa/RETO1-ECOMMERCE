@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+</header>
+<body>
+    <h1>ORDERS</h1>
+   <!--  <li th:each="order : ${orders}"
+        th:object="${order}">
+        <span style="color:black;font-weight: bolder;font-size: 12px; font-family: 'Montserrat', sans-serif;
+        ;"
+        th:text="*{nameUser}"></span>
+        <span style="color:black;font-weight: bolder;font-size: 12px; font-family: 'Montserrat', sans-serif;
+        ;"
+        th:text="*{id}"></span>
+        <a th:href="*{URL}"><button>VER</button></a>
+
+    </li> -->
+    <table>
+
+        <tbody th:each="order : ${orders}"
+        th:object="${order}">
+   
+            <th th:text="*{id}"></th>
+            <th th:text="*{nameUser}"></th>
+            <th th:text="*{date}"></th>
+            <th th:text="*{status}"></th>
+           <th><a th:href="*{URL}"> <button>VER</button></a></th>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

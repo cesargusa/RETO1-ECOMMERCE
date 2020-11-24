@@ -7,6 +7,7 @@ import com.example.Product.Model.Order;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,10 +24,12 @@ public class OrdersController {
     ));
 
     
-    @GetMapping("/orders")
+ /*    @GetMapping("/orders")
     private ArrayList<Order> GetAllOrders(){
         return orders;
     }
+ */
+
 
    
     public static ArrayList<Order> GetAllOrdersId(int orderId){
